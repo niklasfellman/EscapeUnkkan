@@ -14,8 +14,8 @@ let currentQuestion = ""
 let currentPicture = ""
 
 let fragar = [
-	["grön röd gul blå orange","gitarr med fem strängar, vilka är färgerna?","guitar-hero.jpg"],
 	["bob","vad heter räven?","cat.jpg"],
+	["grön röd gul blå orange","gitarr med fem strängar, vilka är färgerna?","guitar-hero.jpg"],
 	["levis","Vad heter Niklas hund?","cat.jpg"],
 	["4","2+2","cat.jpg"]]
 
@@ -37,9 +37,17 @@ function changeRound(svar, fraga, picture) {
 
 changeRound(fragar[currentRound][0], fragar[currentRound][1],fragar[currentRound][2])
 
+
+
+svarFalt.addEventListener("keypress",(x)=>{
+	if(x.key === "Enter"){
+		console.log("WIHIHIHIH")
+	}
+})
+
 svarKnapp.addEventListener("click",(x)=>{
 	let svar = svarFalt.value
-	if(svar === currentPass){
+	if(svar.replace(/\s/g, "").toLowerCase() === currentPass.replace(/\s/g, "")){
 		console.log("rätt")
 		
 		if(currentRound<fragar.length){changeRound(fragar[currentRound][0], fragar[currentRound][1],fragar[currentRound][2])}
@@ -47,5 +55,8 @@ svarKnapp.addEventListener("click",(x)=>{
 	}
 })
 
+
+let test = "testar testar"
+console.log(test.replace(/\s/g, ""))
 
 
