@@ -1,12 +1,8 @@
-console.log("Eyooo")
 let board = document.querySelector(".board")
 let infoBox = document.querySelector(".info-box")
 let svarFalt = document.querySelector(".svar")
 let svarKnapp = document.querySelector(".svar-knapp")
 let bild = document.querySelector(".bild")
-
-console.log(bild.src)
-
 
 let currentPass = ""
 let currentRound = 0
@@ -15,7 +11,7 @@ let currentPicture = ""
 
 let fragar = [
 	["bob","vad heter räven?","cat.jpg"],
-	["grön röd gul blå orange","gitarr med fem strängar, vilka är färgerna?","guitar-hero.jpg"],
+	["grönrödgulblåorange","gitarr med fem strängar, vilka är färgerna?","guitar-hero.jpg"],
 	["levis","Vad heter Niklas hund?","cat.jpg"],
 	["4","2+2","cat.jpg"]]
 
@@ -47,6 +43,7 @@ svarFalt.addEventListener("keypress",(x)=>{
 
 svarKnapp.addEventListener("click",(x)=>{
 	let svar = svarFalt.value
+	svar = svar.replace(/[^\p{L}\d]+/gu, '')
 	if(svar.replace(/\s/g, "").toLowerCase() === currentPass.replace(/\s/g, "")){
 		console.log("rätt")
 		
@@ -54,9 +51,3 @@ svarKnapp.addEventListener("click",(x)=>{
 		else{infoBox.textContent = "Du VANN! Här är koden: 1234"}
 	}
 })
-
-
-let test = "testar testar"
-console.log(test.replace(/\s/g, ""))
-
-
