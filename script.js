@@ -10,9 +10,9 @@ let currentQuestion = ""
 let currentPicture = ""
 
 let fragar = [
-	["bob","vad heter räven?","cat.jpg"],
+	["övergårdsvägen 28","göleyneykzöfnlu 28","cat.jpg"],
 	["grönrödgulblåorange","gitarr med fem strängar, vilka är färgerna?","guitar-hero.jpg"],
-	["levis","Vad heter Niklas hund?","cat.jpg"],
+	["qh4","1.f3 e6 2. g4?? mate in one","cat.jpg"],
 	["4","2+2","cat.jpg"]]
 
 
